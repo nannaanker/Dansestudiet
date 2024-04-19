@@ -7,4 +7,13 @@ module.exports = {
         require('@tailwindcss/aspect-ratio'),
         require('@tailwindcss/container-queries'),
     ],
+    theme: {
+        extend: {
+            colors: {
+                'persianmosaic': {
+                    500: '#196673',
+                  },
+            }
+        }
+    },
   };
