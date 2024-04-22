@@ -38,7 +38,7 @@ const udvalgtenyheder = sorteredenyheder.slice(0, 3);
 			<!-- slut på alt hvad der omhandler lists til nyheder -->
 		</section>
 
-		<section x-data="{ alledansehold: []}" x-init="alledansehold = await (await fetch('dansehold.json')).json()" class="mb-16">
+		<section x-data="{ alledansehold: []}" x-init="alledansehold = await (await fetch('dansehold.json')).json(); alledansehold.reverse();" class="mb-16">
 			<h2 class="my-8 text-4xl">Dansehold Efterår 2024</h2>
 			<!-- alt hvad der omhandler cards til dansehold -->
 			<section class="">
