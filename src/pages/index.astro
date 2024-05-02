@@ -9,7 +9,7 @@ const udvalgtenyheder = sorteredenyheder.slice(0, 6);
 ---
 
 <MainLayout title="Dansestudiet">
-  <div class="h-52 bg-pink-50 grid justify-items-center"><h1 class="mt-20 text-rod-600 text-9xl">DANSESTUDIET</h1></div>
+  <div class="h-52 bg-pink-50 grid justify-items-center"><h1 class="mt-20 font-hero text-rod-600 text-9xl">DANSESTUDIET</h1></div>
   <article class="relative bg-cover h-700 bg-[url('/hero.jpg')]"></article>
   <div class="h-52 bg-pink-50 mb-16 grid justify-items-center"><Button>SE KlASSERNE HER</Button></div>
 
@@ -22,7 +22,7 @@ const udvalgtenyheder = sorteredenyheder.slice(0, 6);
       {
         udvalgtenyheder.map((post) => (
           <li id="slide" class="max-w-sm duration-700 hover:scale-105 ease-in-out shrink-0 snap-center">
-            <div class=" grid justify-items-center text-center text-rod-600 bg-pink-100 mt-2 p-2">
+            <div class=" w-64 h-96 grid justify-items-center text-center text-rod-600 bg-pink-100 mt-2 p-2">
               <div class="">
                 <img src={post.frontmatter.coverimage} alt={post.frontmatter.coveralt} class="h-28 w-28 my-5" />
               </div>
