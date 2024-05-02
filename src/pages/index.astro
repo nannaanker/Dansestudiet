@@ -1,7 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Footer from "../components/Footer.astro";
 import Image from "astro/components/Image.astro";
 import danceMotherFuckerDance from "../assets/images/dance-motherfucker-dance.jpg";
 const dansehold = await Astro.glob("./dansehold/*.md");
@@ -10,12 +9,9 @@ const udvalgtenyheder = sorteredenyheder.slice(0, 6);
 ---
 
 <MainLayout title="Dansestudiet">
-  <div class="h-52 bg-pink-50 grid justify-items-center"><h1 class="mt-20 text-rod-600 text-3xl xl:text-9xl">DANSESTUDIET</h1></div>
+  <div class="h-52 bg-pink-50 grid justify-items-center"><h1 class="mt-20 text-rod-600 text-9xl">DANSESTUDIET</h1></div>
   <article class="relative bg-cover h-700 bg-[url('/hero.jpg')]"></article>
-  <div class="h-80 bg-pink-50 mb-16 grid justify-items-center">
-    <div><p class="text-center max-w-2xl mt-10 text-rod-500">Vi har mere end 50 danseklasser on ugen for alle aldre og niveauer! <br /> <br /> Experimental Contemporary, Afro, House, Street Jazz, Commercial Femme, Hip Hop, Ballet, Moderne Dans, Smidighedstræning, House, Breakdance,Fusion Contemporary, Yoga, Waacking, Workshops m.m. <br /><br /> Tilmeldning til efterårssæsonen 2023 er fortsat åben.</p></div>
-    <Button>SE KlASSERNE HER</Button>
-  </div>
+  <div class="h-52 bg-pink-50 mb-16 grid justify-items-center"><Button>SE KlASSERNE HER</Button></div>
 
   <div class="grid justify-items-center"><h2 class="mb-8 text-pink-50 font-display text-4xl">Dansehold denne sæson</h2></div>
 
@@ -25,8 +21,8 @@ const udvalgtenyheder = sorteredenyheder.slice(0, 6);
     <ul id="wrapper" class="flex flex-row overflow-hidden gap-5 snap-x">
       {
         udvalgtenyheder.map((post) => (
-          <li id="slide" class=" w-72 duration-700 hover:scale-105 ease-in-out shrink-0 snap-center">
-            <div class=" grid justify-items-center text-rod-600 bg-pink-100 mt-2 p-2">
+          <li id="slide" class="max-w-sm duration-700 hover:scale-105 ease-in-out shrink-0 snap-center">
+            <div class=" grid justify-items-center text-center text-rod-600 bg-pink-100 mt-2 p-2">
               <div class="">
                 <img src={post.frontmatter.coverimage} alt={post.frontmatter.coveralt} class="h-28 w-28 my-5" />
               </div>
@@ -65,9 +61,6 @@ const udvalgtenyheder = sorteredenyheder.slice(0, 6);
     </button>
   </section>
 
-  <div class="grid justify-items-center"><h2 class="mb-8 text-pink-50 font-display text-4xl">Workshops</h2></div>
-
-  <div class="h-32 bg-pink-50"></div>
   <script>
     const prevBtn = document.querySelector("#prevbtn");
     const nextBtn = document.querySelector("#nextbtn");
