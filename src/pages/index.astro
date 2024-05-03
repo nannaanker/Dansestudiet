@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Image from "astro/components/Image.astro";
-import danceMotherFuckerDance from "../assets/images/dance-motherfucker-dance.jpg";
 const dansehold = await Astro.glob("./dansehold/*.md");
 const sorterededansehold = dansehold.sort((a, b) => Date.parse(b.frontmatter.dato) - Date.parse(a.frontmatter.dato));
 const udvalgtedansehold = sorterededansehold.slice(0, 6);
@@ -12,8 +11,9 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 6);
 ---
 
 <MainLayout title="Dansestudiet">
-  <div class="h-52 bg-pink-50 grid justify-items-center"><h1 class="mt-20 font-hero text-rod-600 text-9xl">DANSESTUDIET</h1></div>
-  <article class="relative bg-cover h-700 bg-[url('/hero.jpg')]"></article>
+  <div class="h-52 bg-pink-50 grid justify-items-center"><h1 class="mb-10 mt-10 font-hero text-rod-600 text-9xl">DANSESTUDIET</h1></div>
+  <div class="relative -z-10 -top-10 h-20 -rotate-3 bg-pink-50"></div>
+  <article class="relative -z-20 -top-16 bg-cover h-700 bg-[url('/hero.jpg')]"></article>
   <div class="h-96 bg-pink-50 mb-16 grid justify-items-center">
     <div><p class="mt-10 text-sm xl:text-lg text-rod-500 text-center max-w-2xl">Vi har mere end 50 danseklasser on ugen for alle aldre og niveauer! <br /> <br /> Experimental Contemporary, Afro, House, Street Jazz, Commercial Femme, Hip Hop, Ballet, Moderne Dans, Smidighedstræning, House, Breakdance,Fusion Contemporary, Yoga, Waacking, Workshops m.m. <br /> <br /> Tilmeldning til efterårssæsonen 2023 er fortsat åben.</p></div>
     <Button>SE KLASSERNE HER</Button>
@@ -23,7 +23,7 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 6);
 
   <!-- alt hvad der omhandler lists til nyheder -->
 
-  <section class="mb-16 p-4 relative max-w-3xl mx-auto">
+  <section class="mb-16 p-4 relative mx-28">
     <ul id="wrapper" class="flex flex-row overflow-hidden gap-5 snap-x">
       {
         udvalgtedansehold.map((post) => (
@@ -38,11 +38,11 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 6);
                     {post.frontmatter.title}
                   </a>
                 </h3>
-                <p class="text-sm"> {post.frontmatter.underviser}</p>
+                <p class="text-sm">Underviser: {post.frontmatter.underviser}</p>
                 <span class="text-xs">{post.frontmatter.dato}</span>
-                <p class="text-sm"> {post.frontmatter.niveau}</p>
-                <p class="text-sm"> {post.frontmatter.pris}</p>
-                <p class="text-sm"> {post.frontmatter.sted}</p>
+                <p class="text-sm">Niveau: {post.frontmatter.niveau}</p>
+                <p class="text-sm">Pris: {post.frontmatter.pris}</p>
+                <p class="text-sm">Sted: {post.frontmatter.sted}</p>
                 <p class="text-sm"> {post.frontmatter.kortversion}</p>
                 <a href={post.url} class="">
                   <div class="m-5">
@@ -72,7 +72,7 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 6);
 
   <div class="grid justify-items-center"><h2 class="mb-8 text-pink-50 font-hero text-4xl">Workshops</h2></div>
 
-  <section class="mb-16 p-4 relative max-w-3xl mx-auto">
+  <section class="mb-16 p-4 relative mx-28">
     <ul id="wrapper" class="flex flex-row overflow-hidden gap-5 snap-x">
       {
         udvalgteworkshops.map((post) => (
