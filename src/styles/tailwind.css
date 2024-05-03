@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base{
+    @font-face {
+        font-family: dansedisplay;
+        src: url(public/font/DansestudietDisplay1-Bold.otfv);
+    }
 }
 
 @layer components{
