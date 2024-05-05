@@ -19,7 +19,7 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 6);
     <Button>SE KLASSERNE HER</Button>
   </div>
 
-  <div class="grid justify-items-center"><h2 class="mb-8 text-pink-50 font-hero text-4xl">Dansehold denne sæson</h2></div>
+  <div class="grid justify-items-center"><h2 class="mb-8 text-pink-50 font-hero text-2xl lg:text-4xl">Dansehold denne sæson</h2></div>
 
   <!-- alt hvad der omhandler lists til nyheder -->
 
@@ -69,17 +69,17 @@ const udvalgteworkshops = sorteredeworkshops.slice(0, 6);
       </svg>
     </button>
   </section>
-  <div class="grid justify-items-center h-600 m-32 bg-pink-50">
+  <div class="grid justify-items-center h-600 lg:m-32 bg-pink-50">
     <p class="my-270 font-dansedisplay text-2xl">Video om lærerne/holdene</p>
   </div>
-  <div class="grid justify-items-center"><h2 class="mb-8 text-pink-50 font-hero text-4xl">Workshops</h2></div>
+  <div class="grid justify-items-center"><h2 class="mb-8 mt-6 text-pink-50 font-hero text-4xl">Workshops</h2></div>
 
   <section class="mb-16 p-4 relative mx-28">
     <ul id="wrapper" class="flex flex-row overflow-hidden gap-5 snap-x">
       {
         udvalgteworkshops.map((post) => (
           <li id="slide" class="max-w-sm duration-700 hover:scale-105 ease-in-out shrink-0 snap-center">
-            <div class=" w-72 grid justify-items-center text-center text-rod-600 bg-pink-100 mt-2 p-2">
+            <div class="w-72 grid justify-items-center text-center text-rod-600 bg-pink-100 mt-2 p-2">
               <div class="">
                 <img src={post.frontmatter.wscoverimage} alt={post.frontmatter.wscoveralt} class=" w-60 my-5" />
               </div>
