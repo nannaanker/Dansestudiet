@@ -15,7 +15,7 @@ module.exports = {
         sans: ['"Prompt"', ...defaultTheme.fontFamily.sans],
 
         display: ['"Roboto"', "monospace"],
-        hero: ['"dansedisplay"', "monospace",],
+        hero: ['"DansestudietDisplay1"', "monospace",],
         herob: ['"DansestudietDisplay1-Bold"', "monospace",], // Adds a new `font-display` class
       },
 
